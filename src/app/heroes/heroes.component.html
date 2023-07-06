@@ -1,0 +1,11 @@
+<h2>Active Heroes</h2>
+<ul class="heroes">
+    <li *ngFor="let hero of heroes"> <!-- *ngFor is a structural directive -->
+        <button [class.selected]="hero===selectedHero" type="button" (click)="onSelect(hero)">
+            <span class="badge">{{hero.id}} </span>
+            <span class="name">{{hero.name}}</span>
+        </button>
+    </li>
+    <app-hero-detail [hero]="selectedHero"></app-hero-detail>
+</ul>
+
