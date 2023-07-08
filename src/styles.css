@@ -39,6 +39,31 @@ button {
     margin-top: 1rem;
 }
 
+.dashboardlink {
+    background-color: #369;
+    border-radius: 2px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    width: 25%;
+    min-width: 70px;
+    margin: .5rem auto;
+    box-sizing: border-box;
+    margin-inline: .5rem auto;
+  
+    /* flexbox */
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+}
+
+.dashboardlink:hover {
+    background-color: #000;
+}
+
 button:hover {
     background-color: black;
     color: white;
