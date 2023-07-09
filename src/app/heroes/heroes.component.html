@@ -1,10 +1,24 @@
 <h2>Active Heroes</h2>
+<div>
+    <label for="new-hero">Hero name: </label>
+    <input type="new-hero" #heroName/>
+    <label for="new-hero">Superpower: </label>
+    <input type="new-hero" #superpower/>
+    <!-- <label for="new-hero">Ranking: </label>
+    <input type="new-hero" #ranking/> -->
+    <button type="button" class="add-button" 
+    (click)="add(heroName.value, superpower.value ); heroName.value=''; superpower.value='';">
+        Add Hero
+    </button>
+</div>
 <ul class="heroes">
     <li *ngFor="let hero of heroes"> <!-- *ngFor is a structural directive -->
         <a routerLink="/detail/{{hero.id}}">
             <span class="badge">{{hero.id}} </span>
             <span class="name">{{hero.name}}</span>
         </a>
+        <button type="button" class="delete" title="delete hero"
+            (click)="delete(hero)">X</button>
     </li>
 </ul>
 

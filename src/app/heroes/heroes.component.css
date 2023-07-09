@@ -1,4 +1,4 @@
-a {
+a, button {
     background-color: grey;
     border-radius: 4px;
     padding: 1rem;
@@ -20,12 +20,12 @@ a {
 }
 
 
-a:hover {
+button:hover, a:hover {
     background-color: black;
     color: white;
 }
 
-a:disabled {
+button:disabled, a:disabled {
     background-color: #eee;
     color: #aaa;
     cursor: auto;

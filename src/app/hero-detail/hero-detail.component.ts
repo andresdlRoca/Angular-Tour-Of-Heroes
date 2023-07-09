@@ -25,6 +25,13 @@ export class HeroDetailComponent {
     this.location.back();
   }
 
+  save(): void {
+    if (this.hero) {
+      this.heroService.updateHero(this.hero)
+        .subscribe(() => this.goBack());
+    }
+  }
+
   @Input() hero?: Hero;
   constructor(
     private route: ActivatedRoute, // The ActivatedRoute holds information about the route to this instance of the HeroDetailComponent. This component is interested in the route's bag of parameters extracted from the URL. The "id" parameter is the id of the hero to display.  
