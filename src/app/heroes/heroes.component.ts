@@ -17,14 +17,9 @@ export class HeroesComponent implements  OnInit{
   }
 
   heroes: Hero[] = [];
-  selectedHero?: Hero;
   ngOnInit() {
     this.getHeroes();
   }
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-    this.messageService.add(`HeroesComponent: Selected hero ${hero.name} with the id ${hero.id}`); // The onSelect() method assigns the clicked hero from the template to the component's selectedHero. 
-  }
   
-  constructor(private heroService: HeroServiceService, private messageService: MessageService) { }
+  constructor(private heroService: HeroServiceService) { }
 }

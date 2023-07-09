@@ -1,0 +1,32 @@
+a {
+    background-color: grey;
+    border-radius: 4px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    text-align: center;
+    width: 25%;
+    min-width: 70px;
+    margin: .5rem auto;
+    box-sizing: border-box;
+    margin-inline: .5rem auto;
+  
+    /* flexbox */
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+}
+
+
+a:hover {
+    background-color: black;
+    color: white;
+}
+
+a:disabled {
+    background-color: #eee;
+    color: #aaa;
+    cursor: auto;
+}

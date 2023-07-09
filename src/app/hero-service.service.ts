@@ -9,6 +9,12 @@ import { MessageService } from './message.service'; // The HeroService gets hero
 })
 export class HeroServiceService {
 
+  getHero(id: number): Observable<Hero> {
+    const hero = HEROES.find(h => h.id === id)!;
+    this.messageService.add(`HeroService: fetched hero id=${id}`);
+    return of(hero);
+  }
+
   getHeroes(): Observable<Hero[]> { // getHeroes() method returns the mock heroes
     const heroes = of(HEROES);
     this.messageService.add('HeroService: fetched heroes');
